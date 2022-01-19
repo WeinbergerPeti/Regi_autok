@@ -12,6 +12,7 @@ main
                          "n n n n n n n"
                          "a a a a a as as"
                          "f f f f f f f";
+    grid-template-columns: repeat(7, 1fr);
     max-width: 1000px;
     margin: auto;
 }
@@ -86,11 +87,100 @@ img
     border-radius: 5px;
 }
 
+/* index formázás */
+
+.fo_tarolo
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.tarolo
+{
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 0px;
+    border-radius: 5px;
+    border: 1px solid silver;
+    background-color: lightgray;
+}
+
+.tartalom
+{
+    padding: 20px;
+    background-color: white;
+    text-align: justify;
+    margin: 0px;
+}
+
+.nev
+{
+    text-align: left;
+    color: green;
+    padding: 0px;
+    margin-left: 5px;
+}
+
+
+.tarolo img
+{
+    width: 100%;
+    margin: auto;
+}
+
+.ures
+{
+    height: 20px;
+}
+
+
+/* ev_autoi formázás */
+
+table
+{
+    width: 100%;
+    text-align: left;
+    margin: 10px;
+    border-collapse: collapse;
+}
+
+tr
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+tr th
+{
+    border-bottom: 2px solid black;
+    padding: 10px;
+}
+
+tr:nth-child(odd)
+{
+    background-color: white;
+}
+
+tr:nth-child(even)
+{
+    background-color: lightgray;
+}
+
+tr td
+{
+    padding: 10px;
+}
+
+
+
 footer
 {
     grid-area: f;
     text-align: center;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 768px) 
@@ -102,6 +192,7 @@ footer
                              "a a"
                              "as as"
                              "f f";
+        grid-template-columns: 1fr;
     }
     nav ul
     {
@@ -112,4 +203,10 @@ footer
     {
         padding-top: 10px;
     }
+
+    .fo_tarolo
+    {
+        grid-template-columns: 1fr;
+    }
+
 }
